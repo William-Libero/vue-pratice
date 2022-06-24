@@ -12,6 +12,7 @@
     "start": "node server.js"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^1.35.3",
     "axios": "^0.27.2",
     "express": "^4.18.1",
     "secure-ls": "^1.2.6",

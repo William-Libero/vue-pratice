@@ -13,8 +13,18 @@ export default {
       teste: null,
     }
   },
-  created(){
-    console.log('sup');
+  computed: {
+    ...mapGetters(["items"])
+  },
+  async created(){
+    await this.getData();
+  },
+  methods: {
+    ...mapActions(["getItems"]),
+    async getData(){
+      await this.getItems();
+      console.log(this.items);
+    }
   }
 }
 </script>
